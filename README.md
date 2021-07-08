@@ -1,2 +1,2 @@
 # lambda-with-go
-lambda-with-go with slack bot
+Using lambda-with-go to create a slack bot、sam auto deploy、codebuild slack auto notification、
