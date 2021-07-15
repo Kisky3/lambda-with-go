@@ -1,0 +1,6 @@
+payload={
+      "username": "%%USER_NAME%%"
+    , "channel": "#test-seminer"
+    , "text": "%%MESSAGE%%\n\n tag: %%BRANCH%%\n date: %%DATETIME%%\n url: %%COMMIT%%"
+    , "icon_emoji": ":rere:"
+}

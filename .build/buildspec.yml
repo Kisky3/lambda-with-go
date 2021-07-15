@@ -1,0 +1,25 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_DEFAULT_REGION: "ap-northeast-1"
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+      golang: 1.13
+    commands:
+      - echo install  started on `date`
+      - pip install --upgrade awscli
+  pre_build:
+    commands:
+      - echo Started build for last commit $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - df -h
+  build:
+    commands:
+      - echo Build started on `date`
+      - /bin/bash backend/lambda-with-go/.build/build.sh
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
